@@ -8,7 +8,7 @@ A lightweight Python package to read metadata from Sony .ARW files.
 ```bash
 pip install path/to/MyArwReader-0.1.0-py3-none-any.whl
 
-Requirements
+## Requirements
 Python: 3.6 or higher
 pyexiftool: Installed automatically as a dependency
 exiftool: Must be installed separately and available in your system PATH. Download from the official ExifTool website and follow the installation instructions.
@@ -87,3 +87,14 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+### Step 2: Updated `README.md` with `get_tags`
+Here’s a polished version adding `get_tags`, assuming the above as a base (adjust if yours differs):
+
+## Get Multiple Tags (New in v0.1.2)
+from MyArwReader import ARWReader
+
+reader = ARWReader("photo.arw")
+tags = reader.get_tags(["EXIF:ISO", "EXIF:DateTimeOriginal"])
+print(f"ISO: {tags['EXIF:ISO']}")
+print(f"Date: {tags['EXIF:DateTimeOriginal']}")

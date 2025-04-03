@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="MyArwReader",
-    version="0.1.1",  # Bump to 0.1.1 since 0.1.0 is already on PyPI
+    version="0.1.2",  # updated for get_tags
     author="ARWEnthusiast",
     description="A lightweight package to read metadata from Sony .ARW files",
     long_description=long_description,
