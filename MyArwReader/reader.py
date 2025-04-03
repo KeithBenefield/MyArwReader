@@ -1,6 +1,6 @@
-# reader.py
+# MyArwReader/reader.py
 import os
-from typing import Any, Dict
+from typing import Any, Dict, List
 from .metadata import get_metadata
 
 class ARWReader:
@@ -22,3 +22,8 @@ class ARWReader:
         """Get a specific metadata tag from the .ARW file."""
         meta = self.get_metadata()
         return meta.get(tag)
+
+    def get_tags(self, tags: List[str]) -> Dict[str, Any]:
+        """Get multiple metadata tags from the .ARW file in one call."""
+        meta = self.get_metadata()
+        return {tag: meta.get(tag) for tag in tags}
